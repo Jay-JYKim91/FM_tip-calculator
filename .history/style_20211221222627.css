@@ -3,8 +3,8 @@
 
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-cyan: hsl(183, 100%, 15%);
-  --dark-grayish-cyan1: hsl(186, 14%, 43%);
-  --dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
   --light-grayish-cyan1: hsl(185, 41%, 84%);
   --light-grayish-cyan2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
@@ -14,13 +14,15 @@ body {
   font-family: var(--body-font);
 }
 .container {
-  margin: 10vh auto;
-  max-width: 900px;
-  min-width: 796px;
+  margin: 10vh 14vw;
 }
-header {
-  text-align: center;
+.main_title {
   margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--very-dark-cyan);
+  font-size: 1.75rem;
 }
 .calculator_wrapper {
   background-color: var(--white);
@@ -45,13 +47,13 @@ header {
   grid-gap: 0.5em;
 }
 .tip_option {
-  border: 2px solid transparent;
+  border: none;
   background-color: var(--very-dark-cyan);
   color: var(--white);
   font-family: var(--body-font);
   padding: 6px;
   font-size: 22px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -65,124 +67,64 @@ header {
 }
 #custom_tip {
   width: 100%;
+  /* border: none; */
   background-color: var(--light-grayish-cyan2);
+  /* padding: 10px 6px; */
   box-sizing: border-box;
   text-align: right;
   font-size: 20px;
-  color: var(--strong-cyan);
-  caret-color: var(--strong-cyan);
+  /* border-radius: 0.5rem; */
+  color: var(--very-dark-cyan);
 }
 #custom_tip:focus {
   outline: none;
-  border: var(--strong-cyan) 2px solid;
 }
 .title {
   margin: 0 0 10px 0;
   color: var(--very-dark-cyan);
   font-size: 18px;
 }
-.input_box {
-  background-position: 20px 15px;
-  background-repeat: no-repeat;
-  text-align: right;
+.input_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-grayish-cyan2);
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+}
+.input_form input {
+  width: 90%;
   font-size: 24px;
   border: none;
   background-color: var(--light-grayish-cyan2);
   text-align: right;
   color: var(--very-dark-cyan);
-  caret-color: var(--strong-cyan);
-  padding: 10px 20px;
-  border-radius: 0.5rem;
-  width: -webkit-fill-available;
 }
-#billInput {
-  background-image: url("./images/icon-dollar.svg");
-}
-
-#peopleInput {
-  background-image: url("./images/icon-person.svg");
+.input_form input:focus {
+  outline: none;
 }
 .result_wrapper {
   background-color: var(--very-dark-cyan);
   flex-basis: 50%;
   border-radius: 1rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.result_title_wrapper {
-  flex-basis: 40%;
+  padding: 2em;
 }
 .result_title_wrapper p {
-  margin: 0 0 0.3rem 0;
+  margin: 0 0 0.5rem 0;
 }
 .result_wrapper .title {
   color: var(--white);
   /* margin: 0 0 10px 0; */
 }
-.subtitle {
-  color: var(--dark-grayish-cyan2);
-}
 .result_row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
 }
-.display_result {
-  flex-basis: 60%;
-  text-align: right;
-  color: var(--strong-cyan);
-  font-weight: 600;
-  font-size: 2.5rem;
-  margin: 0;
-}
-#resetBtn {
-  border: none;
-  background-color: var(--strong-cyan);
-  color: var(--very-dark-cyan);
-  width: 100%;
-  padding: 10px;
-  font-weight: 600;
-  font-size: 1.3rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all ease-in-out 0.1s;
-}
-#resetBtn:hover {
-  background-color: var(--light-grayish-cyan1);
-}
-
 /* Tablet size */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .container {
-    width: 80vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-  }
+@media (min-width: 768px) and (max-width: 1023px) {
 }
 
 /* Mobile size */
-@media (max-width: 768px) {
-  .container {
-    width: 90vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-  .input_wrapper {
-    padding: 0;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-    padding: 2rem 1.5rem;
-  }
+@media (max-width: 767px) {
 }

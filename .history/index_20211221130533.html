@@ -17,30 +17,37 @@
 </head>
 <body>
   <main class="container">
-    <header>
-      <img src="./images/logo.svg" alt="logo">
-    </header>
-    <section class="calculator_wrapper">
-      <article class="input_wrapper">
+    <h1 class="main-title">Spli<br>tter</h1>
+    <section class="calculator-wrapper">
+      <article class="input-wrapper">
         <div>
           <p class="title">Bill</p>
-          <input type="tel" placeholder="0" class="input_box" id="billInput">
+          <input type="text">
         </div>
         <div>
           <p class="title">Select Tip %</p>
-          <div class="tip_options">
-            <button class="tip_option">5%</button>
-            <button class="tip_option">10%</button>
-            <button class="tip_option">15%</button>
-            <button class="tip_option">25%</button>
-            <button class="tip_option">50%</button>
-            <input type="tel" id="custom_tip" class="tip_option" placeholder="Custom" autocomplete="off">
-          </div>
+          <label for="5%">
+            <input type="radio" id="5%" name="percentage">5%
+          </label>
+          <label for="10%">
+            <input type="radio" id="10%" name="percentage">10%
+          </label>
+          <label for="15%">
+            <input type="radio" id="15%" name="percentage">15%
+          </label>
+          <label for="25%">
+            <input type="radio" id="25%" name="percentage">25%
+          </label>
+          <label for="50%">
+            <input type="radio" id="50%" name="percentage">50%
+          </label>
+          <label for="custom">
+            <input type="text" id="custom" name="percentage" placeholder="Custom">
+          </label>
         </div>
         <div>
           <p class="title">Number of People</p>
-          <input type="tel" placeholder="0" class="input_box" id="peopleInput">
-          </div>
+          <input type="text">
         </div>
       </article>
       <article class="result_wrapper">
@@ -50,18 +57,18 @@
               <p class="title">Tip Amount</p>
               <p class="subtitle">/ person</p>
             </div>
-            <p id="tipAmountPrice" class="display_result">$3.66</p>
+            <p id="tipAmountPrice"></p>
           </div>
           <div class="result_row">
             <div class="result_title_wrapper">
               <p class="title">Total</p>
               <p class="subtitle">/ person</p>
             </div>
-            <p id="totalPrice" class="display_result">$40.23</p>
+            <p id="totalPrice"></p>
           </div>
         </div>
         <div>
-          <button id="resetBtn">Reset</button>
+          <button>Reset</button>
         </div>
       </article>
     </section>

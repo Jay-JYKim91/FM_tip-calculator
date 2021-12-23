@@ -14,13 +14,15 @@ body {
   font-family: var(--body-font);
 }
 .container {
-  margin: 10vh auto;
-  max-width: 900px;
-  min-width: 796px;
+  margin: 10vh 14vw;
 }
-header {
-  text-align: center;
+.main_title {
   margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--very-dark-cyan);
+  font-size: 1.75rem;
 }
 .calculator_wrapper {
   background-color: var(--white);
@@ -45,13 +47,13 @@ header {
   grid-gap: 0.5em;
 }
 .tip_option {
-  border: 2px solid transparent;
+  border: none;
   background-color: var(--very-dark-cyan);
   color: var(--white);
   font-family: var(--body-font);
   padding: 6px;
   font-size: 22px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
@@ -65,48 +67,47 @@ header {
 }
 #custom_tip {
   width: 100%;
+  /* border: none; */
   background-color: var(--light-grayish-cyan2);
+  /* padding: 10px 6px; */
   box-sizing: border-box;
   text-align: right;
   font-size: 20px;
-  color: var(--strong-cyan);
-  caret-color: var(--strong-cyan);
+  /* border-radius: 0.5rem; */
+  color: var(--very-dark-cyan);
 }
 #custom_tip:focus {
   outline: none;
-  border: var(--strong-cyan) 2px solid;
 }
 .title {
   margin: 0 0 10px 0;
   color: var(--very-dark-cyan);
   font-size: 18px;
 }
-.input_box {
-  background-position: 20px 15px;
-  background-repeat: no-repeat;
-  text-align: right;
+.input_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-grayish-cyan2);
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+}
+.input_form input {
+  width: 90%;
   font-size: 24px;
   border: none;
   background-color: var(--light-grayish-cyan2);
   text-align: right;
   color: var(--very-dark-cyan);
-  caret-color: var(--strong-cyan);
-  padding: 10px 20px;
-  border-radius: 0.5rem;
-  width: -webkit-fill-available;
 }
-#billInput {
-  background-image: url("./images/icon-dollar.svg");
-}
-
-#peopleInput {
-  background-image: url("./images/icon-person.svg");
+.input_form input:focus {
+  outline: none;
 }
 .result_wrapper {
   background-color: var(--very-dark-cyan);
   flex-basis: 50%;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -147,42 +148,11 @@ header {
   font-weight: 600;
   font-size: 1.3rem;
   border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all ease-in-out 0.1s;
 }
-#resetBtn:hover {
-  background-color: var(--light-grayish-cyan1);
-}
-
 /* Tablet size */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .container {
-    width: 80vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-  }
+@media (min-width: 768px) and (max-width: 1023px) {
 }
 
 /* Mobile size */
-@media (max-width: 768px) {
-  .container {
-    width: 90vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-  .input_wrapper {
-    padding: 0;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-    padding: 2rem 1.5rem;
-  }
+@media (max-width: 767px) {
 }

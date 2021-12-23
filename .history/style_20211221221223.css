@@ -1,0 +1,109 @@
+:root {
+  --body-font: "Space Mono", monospace;
+
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan1: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--light-grayish-cyan1);
+  font-family: var(--body-font);
+}
+.container {
+  margin: 10vh 14vw;
+}
+.main_title {
+  margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--very-dark-cyan);
+  font-size: 1.75rem;
+}
+.calculator_wrapper {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.input_wrapper {
+  flex-basis: 50%;
+  padding: 0 2em 0 0.5em;
+}
+.input_wrapper div {
+  margin-bottom: 2rem;
+}
+.input_wrapper div:last-child {
+  margin-bottom: 0;
+}
+.tip_options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5em;
+}
+.tip_option {
+  border: none;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-family: var(--body-font);
+  padding: 10px;
+  font-size: 22px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#custom_tip {
+  width: 100%;
+  border: none;
+  background-color: var(--light-grayish-cyan2);
+  padding: 10px 6px;
+  box-sizing: border-box;
+  text-align: right;
+  font-size: 22px;
+  border-radius: 0.5rem;
+  color: var(--very-dark-cyan);
+}
+#custom_tip:focus {
+  outline: none;
+}
+.title {
+  margin: 0 0 10px 0;
+  color: var(--very-dark-cyan);
+}
+.input_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-grayish-cyan2);
+  padding: 10px 20px;
+  border-radius: 0.5rem;
+}
+.input_form input {
+  width: 90%;
+  font-size: 24px;
+  border: none;
+  background-color: var(--light-grayish-cyan2);
+  text-align: right;
+  color: var(--very-dark-cyan);
+}
+.input_form input:focus {
+  outline: none;
+}
+.result_wrapper {
+  background-color: var(--very-dark-cyan);
+  flex-basis: 50%;
+  border-radius: 1rem;
+  padding: 2em;
+}
+
+/* Tablet size */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile size */
+@media (max-width: 767px) {
+}

@@ -106,7 +106,7 @@ header {
   background-color: var(--very-dark-cyan);
   flex-basis: 50%;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,36 +153,12 @@ header {
 #resetBtn:hover {
   background-color: var(--light-grayish-cyan1);
 }
-
 /* Tablet size */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .container {
-    width: 80vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-  }
+@media (min-width: 768px) and (max-width: 1023px) {
 }
 
 /* Mobile size */
 @media (max-width: 768px) {
   .container {
-    width: 90vw;
-    min-width: auto;
-  }
-  .calculator_wrapper {
-    flex-direction: column;
-    padding: 2rem 1.5rem;
-  }
-  .input_wrapper {
-    padding: 0;
-  }
-  .result_wrapper {
-    margin-top: 3rem;
-    padding: 2rem 1.5rem;
   }
 }

@@ -17,14 +17,15 @@
 </head>
 <body>
   <main class="container">
-    <header>
-      <img src="./images/logo.svg" alt="logo">
-    </header>
+    <h1 class="main_title">Spli<br>tter</h1>
     <section class="calculator_wrapper">
       <article class="input_wrapper">
         <div>
           <p class="title">Bill</p>
-          <input type="tel" placeholder="0" class="input_box" id="billInput">
+          <div class="input_form">
+            <img src="./images/icon-dollar.svg" alt="dollar">
+            <input type="tel" placeholder="0">
+          </div>
         </div>
         <div>
           <p class="title">Select Tip %</p>
@@ -39,7 +40,9 @@
         </div>
         <div>
           <p class="title">Number of People</p>
-          <input type="tel" placeholder="0" class="input_box" id="peopleInput">
+          <div class="input_form">
+            <img src="./images/icon-person.svg" alt="person">
+            <input type="tel" placeholder="0">
           </div>
         </div>
       </article>
@@ -50,18 +53,18 @@
               <p class="title">Tip Amount</p>
               <p class="subtitle">/ person</p>
             </div>
-            <p id="tipAmountPrice" class="display_result">$3.66</p>
+            <p id="tipAmountPrice">$3.66</p>
           </div>
           <div class="result_row">
             <div class="result_title_wrapper">
               <p class="title">Total</p>
               <p class="subtitle">/ person</p>
             </div>
-            <p id="totalPrice" class="display_result">$40.23</p>
+            <p id="totalPrice">$40.23</p>
           </div>
         </div>
         <div>
-          <button id="resetBtn">Reset</button>
+          <button>Reset</button>
         </div>
       </article>
     </section>

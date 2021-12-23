@@ -1,0 +1,71 @@
+:root {
+  --body-font: "Space Mono", monospace;
+
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan1: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--light-grayish-cyan1);
+  font-family: var(--body-font);
+}
+.container {
+  margin: 10vh 14vw;
+}
+.main-title {
+  margin: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  color: var(--very-dark-cyan);
+  font-size: 1.75rem;
+}
+.calculator-wrapper {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.input_wrapper {
+  flex-basis: 50%;
+}
+.result_wrapper {
+  background-color: var(--very-dark-cyan);
+  flex-basis: 50%;
+  border-radius: 1rem;
+}
+/* Tablet size */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile size */
+@media (max-width: 767px) {
+}
+
+
+<div>
+          <p class="title">Select Tip %</p>
+          <label for="5%">
+            <input type="radio" id="5%" name="percentage">5%
+          </label>
+          <label for="10%">
+            <input type="radio" id="10%" name="percentage">10%
+          </label>
+          <label for="15%">
+            <input type="radio" id="15%" name="percentage">15%
+          </label>
+          <label for="25%">
+            <input type="radio" id="25%" name="percentage">25%
+          </label>
+          <label for="50%">
+            <input type="radio" id="50%" name="percentage">50%
+          </label>
+          <label for="custom">
+            <input type="text" id="custom" name="percentage" placeholder="Custom">
+          </label>
+        </div>

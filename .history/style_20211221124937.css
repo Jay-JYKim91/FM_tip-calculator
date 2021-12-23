@@ -1,0 +1,32 @@
+:root {
+  --body-font: "Space Mono", monospace;
+
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan1: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+body {
+  background-color: var(--light-grayish-cyan1);
+}
+.container {
+  margin: 10vh 14vw;
+}
+.calculator-wrapper {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+}
+.result_wrapper {
+  background-color: var(--very-dark-cyan);
+}
+/* Tablet size */
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Mobile size */
+@media (max-width: 767px) {
+}
